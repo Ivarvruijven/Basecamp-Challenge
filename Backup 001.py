@@ -15,15 +15,10 @@ def black_jack():
     for soort in soorten:
         for waarde in waarden:
             deck.append((waarde, soort))
-
-    def print_hand(hand):
-
-
-
     # 3x shufflen zodat het echt random is
     shuffle(deck)
-    # shuffle(deck)
-    # shuffle(deck)
+    shuffle(deck)
+    shuffle(deck)
     
 
     # Berekent de waarde van 1 kaart
@@ -144,7 +139,7 @@ def black_jack():
         print("Beide Blackjack, Push!")
         print(f"+€{inzet}")
         print(f"Waarde user: {hand_waarde(hand)}")
-        # print(f"Waarde computer: {hand_waarde(computer)}")
+        print(f"Waarde computer: {hand_waarde(computer)}")
         userbalance+=inzet
     elif hand_waarde(computer) > 21 and hand_waarde(hand) <= 21:
         print()
