@@ -9,21 +9,20 @@ def black_jack():
     userbalance-=inzet
     hand = []
     computer = []
-    soorten = ["♥️", "♠️", "♦️", "🍀"]
+    soorten = ["♥️", "♠️", "♦️", "♣️"]
     waarden = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Boer", "Vrouw", "Heer", "Aas"]
     deck = []
     for soort in soorten:
         for waarde in waarden:
             deck.append((waarde, soort))
 
-    def print_hand(hand):
 
 
 
     # 3x shufflen zodat het echt random is
     shuffle(deck)
-    # shuffle(deck)
-    # shuffle(deck)
+    shuffle(deck)
+    shuffle(deck)
     
 
     # Berekent de waarde van 1 kaart
