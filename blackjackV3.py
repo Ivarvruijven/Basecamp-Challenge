@@ -139,7 +139,7 @@ def black_jack():
         print("Beide Blackjack, Push!")
         print(f"+€{inzet}")
         print(f"Waarde user: {hand_waarde(hand)}")
-        print(f"Waarde computer: {hand_waarde(computer)}")
+        # print(f"Waarde computer: {hand_waarde(computer)}")
         userbalance+=inzet
     elif hand_waarde(computer) > 21 and hand_waarde(hand) <= 21:
         print()
