@@ -16,10 +16,15 @@ def black_jack():
     for soort in soorten:
         for waarde in waarden:
             deck.append((waarde, soort))
+
+    def print_hand(hand):
+
+
+
     # 3x shufflen zodat het echt random is
     shuffle(deck)
-    shuffle(deck)
-    shuffle(deck)
+    # shuffle(deck)
+    # shuffle(deck)
     
 
     # Berekent de waarde van 1 kaart
