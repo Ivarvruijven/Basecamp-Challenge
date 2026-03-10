@@ -1,0 +1,44 @@
+import os
+bal= 0
+inzet = 0
+def clear():
+    os.system("cls" if os.name == "nt" else "clear")
+
+def menu():
+    print( "╔══════════════════════════════════════════════════════════════")
+    print(f"║ Balance: €{bal}           inzet: €{inzet}      ")
+    print( "╠══════════════════════════════════════════════════════════════")
+    print( "║ 1. Starten                     ")
+    print( "║ 2. Opwaarderen                 ")
+    print( "║ 3. Inzet aanpassen             ")
+    print( "║ 4. Stoppen                     ")
+    print( "╚══════════════════════════════════════════════════════════════")
+
+def starten():
+    print("\n▶ Programma gestart")
+
+def opwaarderen():
+    print("\n▲ Opwaarderen gekozen")
+
+def inzet_aanpassen():
+    print("\n⚙ Inzet aanpassen")
+
+while True:
+    clear()
+    menu()
+
+    keuze = input("\nKies een optie (1-4): ")
+
+    if keuze == "1":
+        starten()
+    elif keuze == "2":
+        opwaarderen()
+    elif keuze == "3":
+        inzet_aanpassen()
+    elif keuze == "4":
+        print("\nProgramma stopt...")
+        break
+    else:
+        print("\nOngeldige keuze")
+
+    input("\nDruk op Enter om terug te gaan naar het menu...")

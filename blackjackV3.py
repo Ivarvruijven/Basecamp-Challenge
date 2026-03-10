@@ -92,8 +92,7 @@ def black_jack():
         if hand_waarde(hand) < 21:
             keuze = input("Maak je keuze (nummer):\n1. Hit\n2. Stand\n")
             while keuze != "1" and keuze != "2":
-                    print("invalid keuze, probeer opnieuw")
-                    keuze = input("Maak je keuze (nummer):\n1. Hit\n2. Stand\n")
+                     keuze = input("Maak je keuze (nummer):\n1. Hit\n2. Stand\n")
             while keuze == "1":
                 if keuze == "1":
                     kaart = deck.pop()
@@ -143,35 +142,34 @@ def black_jack():
         print("Beide Blackjack, Push!")
         print(f"+€{inzet}")
         print(f"Waarde user: {hand_waarde(hand)}")
-        # print(f"Waarde computer: {hand_waarde(computer)}")
+        print(f"Waarde computer: {hand_waarde(computer)}")
         userbalance+=inzet
     elif hand_waarde(computer) > 21 and hand_waarde(hand) <= 21:
         print()
         print("Computer bust, User wint!")
         print(f"+€{inzet}")
-        print(f"Waarde user: {hand_waarde(hand)}")
-        print(f"Waarde computer: {hand_waarde(computer)}")
+        waarde()
         userbalance+=(inzet*2)
     elif hand_waarde(computer) > hand_waarde(hand) and hand_waarde(computer) <= 21:
         print()
         print("Computer wint!")
         print(f"-€{inzet}")
-        print(f"Waarde user: {hand_waarde(hand)}")
-        print(f"Waarde computer: {hand_waarde(computer)}")
+        waarde()
     elif hand_waarde(hand) > 21 and hand_waarde(computer) <= 21:
         print()
         print("Computer wint!")
         print(f"-€{inzet}")
-        print(f"Waarde user: {hand_waarde(hand)}")
-        print(f"Waarde computer: {hand_waarde(computer)}")    
+        waarde()    
     elif hand_waarde(computer) < hand_waarde(hand) and hand_waarde(hand) <= 21:
         print()
         print("User wint!")
         print(f"+€{inzet}")
-        print(f"Waarde user: {hand_waarde(hand)}")
-        print(f"Waarde computer: {hand_waarde(computer)}")
+        Waarde()
         userbalance+=(inzet*2)
-    
+
+def Waarde():
+    print(f"Waarde user: {hand_waarde(hand)}")
+    print(f"Waarde computer: {hand_waarde(computer)}")  
 
 def keuzemenu ():
     global inzet
