@@ -18,8 +18,8 @@ def black_jack():
             deck.append((waarde, soort))
     # 3x shufflen zodat het echt random is
     shuffle(deck)
-    shuffle(deck)
-    shuffle(deck)
+    # shuffle(deck)
+    # shuffle(deck)
     
 
     # Berekent de waarde van 1 kaart
